@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .islem , .arama, #listeyaz
+    {
+        padding: 10px;
+        border:  3px solid black;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+        width: 900px;
+    }
+     button{
+        display: inline-block;
+        width: 120px;
+        height: 30px;
+        padding: 5px;
+        font-weight: bold;
+        margin-left: 10px;
+
+    }
+    input{
+        display: inline-block;
+        width: 220px;
+        height: 25px;
+        font-size: 20px;
+    }
+
+
+</style>
+<body>
+    <div class="islem">
+        Ad soyad <input type="text" name="" id="giris"> 
+        <button type="button" onclick="Ekle()">EKLE</button>
+         <button type="button" onclick="Listele()">LİSTELE</button> <button type="button" onclick="Sirala()">SIRALA</button> 
+         <button type="button" onclick="Tersle()">TERSLE</button>
+    </div>
+    <div class="arama">
+        <input type="text" name="" id="aranan">
+        <button type="button" onclick="Ara()">ARA</button> 
+        <button type="button" onclick="Karistir()">R-SIRALA</button>
+        <button type="button" onclick="Sec()">SEÇİM YAP</button>
+    </div>
+
+    <div id="listeyaz">
+       
+    </div>
+
+    <script>
+
+        var liste=[];
+        function Ekle()
+        {
+            var isim =document.getElementById("giris").value;
+            if(isim!="")
+            liste.push(isim);
+            document.getElementById("giris").value="";
+            document.getElementById("giris").focus();
+           
+
+        }
+
+        function Listele()
+        {
+            document.getElementById("listeyaz").innerHTML="";
+        for(i=0;i<liste.length;i++)
+        {
+            document.getElementById("listeyaz").innerHTML+=(i+1)+". "+liste[i]+"<br>";
+        }
+            
+        }
+        function Sirala()
+        {
+            document.getElementById("listeyaz").innerHTML="";
+            liste.sort();
+            for(i=0;i<liste.length;i++)
+        {
+            document.getElementById("listeyaz").innerHTML+=(i+1)+". "+liste[i]+"<br>";
+        }
+            
+            
+        }
+        function Tersle()
+        {
+            document.getElementById("listeyaz").innerHTML="";
+            liste.reverse();
+            for(i=0;i<liste.length;i++)
+        {
+            document.getElementById("listeyaz").innerHTML+=(i+1)+". "+liste[i]+"<br>";
+        }
+          
+         
+        }
+        function Ara()
+        {
+            var ara=document.getElementById("aranan").value;
+            var bul=liste.indexOf(ara);
+            if(bul>=0) alert("Aranan "+(bul+1)+". sırada bulundu.");
+            else alert("ARANAN BULUNAMADI")
+
+
+            
+        }
+
+        function RastgeleSirala()
+        {
+            var x,y,yedek;
+            for(i=1;i<=100;i++)
+        {
+            x=Math.floor(Math.random()*liste.length);
+            y=Math.floor(Math.random()*liste.length);
+            yedek=liste[x];
+            liste[x]=liste[y];
+            liste[y]=yedek;
+        }
+            
+            
+
+        }
+
+
+        function Karistir()
+        {
+            document.getElementById("listeyaz").innerHTML="";
+
+            RastgeleSirala();
+            for(i=0;i<liste.length;i++)
+        {
+            document.getElementById("listeyaz").innerHTML+=(i+1)+". "+liste[i]+"<br>";
+        }
+
+
+    
+        }
+
+        function Sec()
+        {
+            document.getElementById("listeyaz").innerHTML="";
+
+            var adet=prompt("Kaç Kişi seçim Yapılacak?")
+            RastgeleSirala();
+            document.getElementById("listeyaz").innerHTML+="****SEÇİLENLER***** <br>";
+            for(i=0;i<adet;i++)
+        {
+            document.getElementById("listeyaz").innerHTML+=(i+1)+". "+liste[i]+"<br>";
+        }
+
+            
+        }
+
+
+    </script>
+   
+</body>
+</html>

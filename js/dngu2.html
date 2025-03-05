@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <h2>DÖNGÜLER İLE ÇALIŞMA</h2>
+      Adet : <input type="text" id="sayi"> <button onclick="Ekle()">EKLE</button>
+      <p id="yazi"></p>
+
+      <script>
+
+      function Ekle()
+      {
+            document.getElementById("yazi").innerHTML="";
+            var adet=document.getElementById("sayi").value;
+            for(i=1;i<=adet;i++) //alt alta belirtilen özelliklerde yıldız ekler
+      {
+            document.getElementById("yazi").innerHTML+="<span style='font-size:24px; color:red;'>&#9730;</span><br>";
+      }
+
+      }
+
+      </script>
+</body>
+</html>
