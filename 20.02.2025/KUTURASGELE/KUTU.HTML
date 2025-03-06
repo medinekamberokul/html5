@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu{
+            margin-left: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+        <script>
+    var k1g,k1y,k2g,k2y,k3g,k3y,k4g,k4y;
+    k1g=Math.floor(Math.random()*250+50);
+    k1y=Math.floor(Math.random()*250+50);
+    k2g=Math.floor(Math.random()*250+50);
+    k2y=Math.floor(Math.random()*250+50);
+    k3g=Math.floor(Math.random()*250+50);
+    k3y=Math.floor(Math.random()*250+50);
+    k4g=Math.floor(Math.random()*250+50);
+    k4y=Math.floor(Math.random()*250+50);
+document.getElementsByClassName("kutu")[0].style.width=k1g+"px";
+document.getElementsByClassName("kutu")[0].style.height=k1y+"px";
+document.getElementsByClassName("kutu")[1].style.width=k2g+"px";
+document.getElementsByClassName("kutu")[1].style.height=k2y+"px";
+document.getElementsByClassName("kutu")[2].style.width=k3g+"px";
+document.getElementsByClassName("kutu")[2].style.height=k3y+"px";
+document.getElementsByClassName("kutu")[3].style.width=k4g+"px";
+document.getElementsByClassName("kutu")[3].style.height=k4y+"px";
+
+
+var a1,a2,a3,b1,b2,b3,c1,c2,c3,d1,d2,d3;
+a1=Math.floor(Math.random()*225);
+a2=Math.floor(Math.random()*225);
+a3=Math.floor(Math.random()*225);
+document.getElementsByClassName("kutu")[0].style.backgroundColor="rgb("+a1+","+a2+","+a3+")";
+b1=Math.floor(Math.random()*255);
+b2=Math.floor(Math.random()*255);
+b3=Math.floor(Math.random()*255);
+document.getElementsByClassName("kutu")[1].style.backgroundColor="rgb("+b1+","+b2+","+b3+")";
+c1=Math.floor(Math.random()*225);
+c2=Math.floor(Math.random()*225);
+c3=Math.floor(Math.random()*225);
+document.getElementsByClassName("kutu")[2].style.backgroundColor="rgb("+c1+","+c2+","+c3+")";
+d1=Math.floor(Math.random()*225);
+d2=Math.floor(Math.random()*225);
+d3=Math.floor(Math.random()*225);
+document.getElementsByClassName("kutu")[3].style.backgroundColor="rgb("+d1+","+d2+","+d3+")";
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

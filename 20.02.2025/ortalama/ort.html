@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matematik=[15,90,30];
+        var tarih=[80,65];
+        var fizik=[50,90,75];
+        var ortalamalar=[];
+
+        ort1=(matematik[0]+matematik[1]+matematik[2])/3;
+        ort2=(tarih[0]+tarih[1])/2;
+        ort3=(fizik[0]+fizik[1]+fizik[2])/3;
+
+        
+        ortalamalar.push(ort1); 
+        ortalamalar.push(ort2); 
+        ortalamalar.push(ort3); 
+
+        var genelortalama=0;
+        genelortalama=(ortalamalar[0]+ortalamalar[1]+ortalamalar[2])/3;
+        alert("matematik ortalaması : "+ ort1+"\n tarih ortalaması : "+ort2+"\n fizik ortalaması : "+ort3+"\n genel ortalama : "+genelortalama);
+    </script>
+</body>
+</html>
